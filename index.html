@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="description" content="description here" />
+      <meta anme="keywords" content="keywords ,65 key for seo" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <meta name="author" content="Mohamed Okasha" />
+      <title>CRUD</title>
+      <!-- Font Awesome  -->
+      <link rel="stylesheet" href="css/all.min.css" />
+      <link rel="stylesheet" href="css/bootstrap.min.css" />
+      <link rel="stylesheet" href="css/style.css" />
+   </head>
+   <body>
+
+
+
+      <main>
+
+
+       <header id="to-top " class="cr1  pt-5">
+            <i class="fab fa-cuttlefish text-white"></i>
+            <i class="far fa-registered text-white"></i>
+            <i class="fab fa-uniregistry text-white"></i>
+            <i class="fab fa-dyalog text-white"></i>
+         </header>
+
+
+         <section class="crud min-vh-100 bg-dark text-white font-monospace">
+            <div class="container-lg">
+               <div class="content py-2">
+                  <div class="data d-flex justify-content-end">
+                     <button
+                        id="btnDeleteData"
+                        tabindex="-1"
+                        type="button"
+                        class="btn btn-danger btn-sm "
+                     >
+                        Delete All Data
+                     </button>
+                     <div id="contDelete" class="d-none">
+                        <button
+                           id="deleteSureYes"
+                           type="button"
+                           class="btn btn-link btn-sm ms-5"
+                        >
+                           Yes
+                        </button>
+                     </div>
+                  </div>
+                  <!-- ------ Form ------ -->
+                  <div class="form row">
+                     <div class="col-sm-5">
+                        <div class="data">
+                           <label for="productName" class="form-label"
+                              >Name</label
+                           >
+                           <input
+                              type="text"
+                              name="productName"
+                              id="productName"
+                              class="form-control"
+                           />
+                        </div>
+                     </div>
+                     <div class="col-sm-5">
+                        <div class="data">
+                           <label for="productPrice" class="form-label"
+                              >Price</label
+                           >
+                           <input
+                              type="number"
+                              name="productPrice"
+                              id="productPrice"
+                              class="form-control"
+                           />
+                        </div>
+                     </div>
+                     <div class="col-sm-5">
+                        <div class="data">
+                           <label for="productCategory" class="form-label"
+                              >Category</label
+                           >
+                           <input
+                              type="text"
+                              name="productCategory"
+                              id="productCategory"
+                              class="form-control"
+                           />
+                        </div>
+                     </div>
+                     <div class="data textarea my-3">
+                        <label for="productDescription" class="form-label"
+                           >Description</label
+                        >
+                        <textarea
+                           name="productDescription"
+                           id="productDescription"
+                           class="form-control"
+                        ></textarea>
+                     </div>
+                  </div>
+                  <div class="btn-add d-flex justify-content-between">
+                     <button
+                        type="button"
+                        class="btn btn-sm btn-link"
+                        id="restForm"
+                     >
+                        Reset
+                     </button>
+                     <button
+                        type="button"
+                        class="btn btn-primary"
+                        id="addProduct"
+                     >
+                        Add Product
+                     </button>
+                  </div>
+                  <hr />
+                  <!-- ------ Search ------ -->
+                  <div class="input-group w-75 mx-auto py-2">
+                     <span class="input-group-text">
+                        <i class="fas fa-magnifying-glass"></i>
+                     </span>
+                     <input type="search" class="form-control" id="btnSearch" />
+                  </div>
+                  <!-- ------ Table ------ -->
+                  <div class="table-responsive mt-2">
+                     <table class="table table-dark table-striped caption-top">
+                        <caption>
+                           Product List
+                           <span class="badge bg-success"
+                              >Total:
+                              <span
+                                 id="totalProudcts"
+                                 class="bg-danger bg-opacity-50 px-1 rounded-3"
+                                 >0</span
+                              ></span
+                           >
+                        </caption>
+                        <thead>
+                           <th>#</th>
+                           <th>Name</th>
+                           <th>Price</th>
+                           <th>Category</th>
+                           <th>Description</th>
+                        </thead>
+                        <tbody id="tableBody"></tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+      <!-- Js For Font Awesome For Convert i To Svg -->
+      <script src="./js/all.min.js"></script>
+      <script src="./js/bootstrap.bundle.min.js"></script>
+      <script src="./js/main.js"></script>
+   </body>
+</html>
